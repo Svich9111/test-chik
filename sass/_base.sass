@@ -1,0 +1,62 @@
+@mixin respond($breakpoint)
+    @if $breakpoint == phone
+        @media only screen and (max-width: 560px)
+            @content
+    
+    @if $breakpoint == tab-port
+        @media only screen and (max-width: 768px)
+            @content
+
+    @if $breakpoint == tab-land
+        @media only screen and (max-width: 1024px)
+            @content
+
+    @if $breakpoint == big-screen
+        @media only screen and (min-width: 1800px)
+            @content
+
+@font-face 
+    font-family: 'Raleway'
+    font-style: normal
+    font-weight: 400
+    src: url('../fonts/raleway-regular.woff2') format('woff2'), url('../fonts/raleway-regular.woff') format('woff')
+
+html
+    font-size: 62.5%
+    box-sizing: border-box
+    scroll-behavior: smooth
+    
+
+
+
+
+*, ::after, ::before
+    margin: 0
+    padding: 0
+    box-sizing: border-box
+
+body
+    min-width: 32rem
+    font-family: 'Raleway', sans-serif
+    font-feature-settings: 'pnum' on, 'lnum' on
+    background-color: #241D1C
+    color: #F6F3E3
+    line-height: 1.2
+    font-weight: 400
+    font-size: 1.6rem
+
+img
+    max-width: 100%
+    height: auto
+
+.visually-hidden
+    position: fixed
+    transform: scale(0)
+
+.container
+    max-width: 131.2rem
+    padding: 0 4.8rem
+    margin: 0 auto
+    @include respond(phone)
+        padding: 0 2.4rem
+

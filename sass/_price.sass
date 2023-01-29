@@ -1,0 +1,65 @@
+.price 
+    padding: 6.2rem 0
+    @include respond(tab-port)
+        padding: 4rem 0
+    @include respond(phone)
+        padding: 3.2rem 0
+    &__title
+        font-size: 4rem
+        font-weight: 400
+        text-transform: uppercase
+        margin-bottom: 1.6rem
+        @include respond(tab-port)
+            font-size: 3.2rem
+        @include respond(phone)
+            font-size: 2rem
+            margin-bottom: .8rem
+    &__tagline
+        margin-bottom: 4rem
+        @include respond(phone)
+            margin-bottom: 2.4rem
+            font-size: 1.2rem
+    &__wrapper-content
+        display: flex
+        gap: 3.2rem
+        &::before
+            content: ""
+            flex-basis: 50%
+            background-position: top
+            background-size: cover
+            background-image: url('../img/price-img.jpg')
+        @include respond(tab-port)
+            &::before
+                content: none
+    &__content
+        flex-basis: 50%
+        @include respond(tab-port)
+            flex-basis: 100%
+    &__list
+        list-style: none
+        margin-bottom: 6.2rem
+        @include respond(tab-port)
+            margin-bottom: 4rem
+        @include respond(phone)
+            margin-bottom: 2.4rem
+    &__item
+        display: flex
+        justify-content: space-between
+        font-weight: 400
+        font-size: 1.4rem
+        line-height: 1
+        text-transform: uppercase
+        padding-bottom: .7rem
+        border-bottom: .1rem solid #BFBDB2
+        margin-bottom: 2.4rem
+        &:last-child
+            margin-bottom: 0
+        @include respond(phone)
+            padding-bottom: .6rem
+            margin-bottom: 1.6rem
+            font-size: 1.2rem
+            line-height: 1.2
+        &-count
+            white-space: nowrap
+
+

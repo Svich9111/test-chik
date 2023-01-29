@@ -1,0 +1,50 @@
+.radio 
+    &__input
+        position: absolute
+        appearance: none
+        -webkit-appearance: none
+        -moz-appearance: none
+        &:focus + .radio__label
+        &:checked + .radio__label
+            color: #241D1C
+            background: #F6F3E3
+        &:disabled + .radio__label
+            opacity: 0.3
+        @include respond(tab-port)
+    &__label
+        display: inline-block
+        padding: 1.6rem 2.4rem
+        font-size: 1.4rem
+        line-height: 1
+        text-transform: uppercase
+        cursor: pointer
+        border: .1rem solid #BFBDB2
+        border-radius: 36px 
+        &:hover :not(:disabled)
+            color: #EFE7BE
+        @include respond(tab-port)
+            padding: 1.2rem 1.6rem
+            font-size: 1.2rem
+        &_spec 
+            position: relative
+            padding-left: 5.2rem
+            &:before
+                content: ''
+                position: absolute
+                left: .8rem
+                top: 50%
+                transform: translateY(-50%)
+                display: block
+                width: 3.6rem
+                height: 3.6rem
+                border-radius: 50%
+                background-image: var(--bg-image)
+                background-size: cover
+                background-position: center
+                background-repeat: no-repeat
+            @include respond(tab-port)
+                padding-left: 4rem
+                &:before
+                    width: 2.4rem
+                    height: 2.4rem
+
